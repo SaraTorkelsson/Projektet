@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Lista på elever -->
+    <h2>Lista på samtliga elever: </h2>
+    <ul id="studentList"></ul>
+
+    <!-- Alla skolor -->
+    <h3 for="filterSchool">
+        Sortera elever efter program, ålder eller i bokstavsordning: 
+    </h3>
+    <div>
+        <input type="radio" name="filterSchool" value=".NET" id="school1">
+        <label for="school1">.NET</label>
+    </div>
+    <div>
+        <input type="radio" name="filterSchool" value="Frontend" id="school2">
+        <label for="school2">Frontend</label>
+    </div>
+    <div>
+        <input type="radio" name="filterSchool" value="Backend" id="school3">
+        <label for="school3">Backend</label>
+    </div>
+
+    <!-- Knapp för att filtrera efter program -->
+    <button id="filterBtn">Visa elever</button>
+
+    <div>
+    <!-- Knapp för ålder -->
+    <button id="sortByAgeBtn">Sortera efter ålder</button>
+
+    <!-- Knapp för förnamn -->
+    <button id="sortByFirstNameBtn">Sortera efter förnamn (A-Ö)</button>
+    
+    <!-- Knapp för efternamn -->
+    <button id="sortByLastNameBtn"> Sortera efter efternamn (A-Ö)</button>
+
+    <!-- Se skola som passar varje elev -->
+    <button id="sortBySchoolBtn">Se vilken skola som passar varje elev</button>
+    </div>
+
+    <!-- Ny lista efter man filtrerat elever efter program -->
+    <ul id="filteredStudentList"></ul>
+
+    <div id="schoolList"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
